@@ -43,6 +43,20 @@ public class UserController {
         return user;
     }
 
+    @RequestMapping("/userTEST2")
+    @ResponseBody
+    public String updateUserInfoByName(String name){
+        userService.updateUserByUsername("testZhang","lisi");
+        return "success";
+    }
+
+    @RequestMapping("/userTEST3")
+    @ResponseBody
+    public String updateUserInfoByName2(String name){
+        userService.updateUserByUsername2("testZhang","99");
+        return "success";
+    }
+
     @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<User> queryUserById(@PathVariable("name") String id) {

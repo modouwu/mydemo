@@ -8,12 +8,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @MapperScan("com.example.demo.mybatis")
 @ServletComponentScan
-@ComponentScan(basePackages = "com.example.demo")
+//@ComponentScan(basePackages = "com.example.demo")默认加载当前目录及下属所有目录
 @EnableConfigurationProperties({WiselySettings.class,WiselySettings2.class,WiselySettings3.class})
 public class DemoApplication {
 

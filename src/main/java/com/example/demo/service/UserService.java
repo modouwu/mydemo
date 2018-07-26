@@ -14,5 +14,8 @@ public interface UserService {
     //public void findUserByUsername(String username) {
         //return userMapper.findUserByUsername(username);
     //}
+    void updateUserByUsername(String username,String username2);
+    Integer updateUserByUsername2(String username,String age);
+    Integer updateUserByUsername3(String username,String age);
 
 }

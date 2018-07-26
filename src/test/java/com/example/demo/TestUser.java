@@ -105,4 +105,9 @@ public class TestUser {
         List<Object> list1=pipeline1.getResults();
         List<Object> list2=pipeline1.syncAndReturnAll();
     }
+
+    @Test
+    public void redisTest(){
+        Jedis redis = new Jedis("localhost", 6379);
+    }
 }
